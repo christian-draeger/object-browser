@@ -606,7 +606,7 @@ const ObjectDetailPanel = ({
               : tagKeys.map((tagKey, index) => {
                   return (
                     <span key={`key-vs-${index.toString()}`}>
-                      {tagKey}:{get(actualInfo, `tags.${tagKey}`, "")}
+                      {tagKey}:{get(actualInfo.tags, [tagKey], "")}
                       {index < tagKeys.length - 1 ? ", " : ""}
                     </span>
                   );
